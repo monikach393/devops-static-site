@@ -7,7 +7,7 @@ phases:
   post_build:
     commands:
       - echo "Deploying to S3..."
-      - aws s3 cp index.html s3://YOUR_BUCKET_NAME/ --acl public-read
+      - aws s3 cp index.html s3://learnbay-project/ --acl public-read
 
 artifacts:
   files:
