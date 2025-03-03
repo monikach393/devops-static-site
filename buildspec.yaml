@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building the static site..."
+  post_build:
+    commands:
+      - echo "Deploying to S3..."
+      - aws s3 cp index.html s3://learnbay-project/ --acl public-read
+
+artifacts:
+  files:
+    - index.html
